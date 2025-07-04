@@ -1,5 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
+using BCSPictorial.Models;
+using BCSPictorial.ViewModel;
+using BCSPictorial.Helpers;
 namespace BCSPictorial
 {
     public static class MauiProgram
@@ -7,8 +10,15 @@ namespace BCSPictorial
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+            builder.Services.AddTransient<Pictorial>();
+            builder.Services.AddTransient<PictorialVM>();
             builder
+
                 .UseMauiApp<App>()
+                
+                .UseMauiCommunityToolkitMediaElement()
+               .UseMauiCommunityToolkit()
+               
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

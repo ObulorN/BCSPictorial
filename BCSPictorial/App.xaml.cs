@@ -1,4 +1,6 @@
-﻿namespace BCSPictorial
+﻿using BCSPictorial.ViewModel;
+
+namespace BCSPictorial
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new MainPage(); // AppShell();
+            MainPage = new MainPage(new PictorialVM()); // AppShell();
         }
     }
 }

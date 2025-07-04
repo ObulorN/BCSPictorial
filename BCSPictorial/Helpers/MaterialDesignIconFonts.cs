@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BCS_ShowLove_App.Helpers
+namespace BCSPictorial.Helpers
 {
     static class MaterialDesignIconFonts
     {
