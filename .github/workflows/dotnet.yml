@@ -15,14 +15,14 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.x
     - name:  install .Net maui
       run:  dotnet workload install maui
     
     - name: Build
-      run: dotnet build https://github.com/ObulorN/BCSPictorial/BCSPictorial/BCSPictorial.csproj -c -Release -f net9.0-android --no-restore
+      run: dotnet build BCSPictorial/BCSPictorial/BCSPictorial.csproj -c -Release -f net9.0-android --no-restore
    
