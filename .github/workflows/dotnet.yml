@@ -24,5 +24,5 @@ jobs:
       run:  dotnet workload install maui
     
     - name: Build
-      run: dotnet build ~/BCSPictorial/BCSPictorial/BCSPictorial.csproj -c -Release -f net9.0-android --no-restore
+      run: dotnet build https://github.com/ObulorN/BCSPictorial/BCSPictorial/BCSPictorial.csproj -c -Release -f net9.0-android --no-restore
    
