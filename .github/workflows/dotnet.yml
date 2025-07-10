@@ -23,5 +23,5 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build /BCSPictorial/BCSPictorial.csproj -c -Release -f net9.0-android --norestore
+      run: dotnet build BCSPictorial/BCSPictorial.csproj -c -Release -f net9.0-android --norestore
    
