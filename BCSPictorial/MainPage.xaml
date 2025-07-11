@@ -11,9 +11,24 @@
         <viewModels:PictorialVM/>
     </ContentPage.BindingContext>-->
 
-    <Grid     BackgroundColor="#2F0909" RowDefinitions=".1*,.8*,.3*">
+    <Grid     RowDefinitions=".1*,.8*,.3*">
 
+        <Grid.Background>
+            <LinearGradientBrush   StartPoint="0,0"  EndPoint="0,1" >
+                <GradientStopCollection >
+                    
+                      <GradientStop Color="#2F0909"  Offset="0"/>
+                <GradientStop Color="#ee3938"  Offset="1"/>
 
+                </GradientStopCollection>
+                
+              
+
+            </LinearGradientBrush>
+            
+            
+            
+        </Grid.Background>
         <Label Grid.Row="0"   Text="BCS Pictorials" TextColor="White"  FontAttributes="None"  FontSize="30" HorizontalTextAlignment="Center" Margin="10,1,0,0"></Label>
 
         <CarouselView Grid.Row="1"  ItemsSource="{Binding Items}" PeekAreaInsets="30">
