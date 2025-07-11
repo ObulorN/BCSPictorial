@@ -21,7 +21,11 @@ jobs:
       with:
         dotnet-version: 9.0.x
     
-    - name: Check Dir
-      run:  pwd
+    - name: Install .NET MAUI
+      run: dotnet workload install maui
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build BCSPictorial\BCSPictorial\.csproj -c Release -f net9.0-android
      
   
