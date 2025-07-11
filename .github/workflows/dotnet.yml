@@ -23,9 +23,9 @@ jobs:
     
     - name: Install .NET MAUI
       run: dotnet workload install maui
-    #- name: Restore dependencies
-     # run: dotnet restore
-      #working-directory:  BCSPictorial/BCSPictorial
+    - name: Restore dependencies
+      run: dotnet restore
+     
     - name: Build
       run: dotnet build BCSPictorial.csproj  --configuration Release -f net9.0-android
      
