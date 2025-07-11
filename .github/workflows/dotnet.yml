@@ -27,6 +27,6 @@ jobs:
       run: dotnet restore
      
     - name: Build
-      run: dotnet build BCSPictorial/BCSPictorial/BCSPictorial.csproj  --configuration Release -f net9.0-android
+      run: dotnet build ./BCSPictorial/BCSPictorial.csproj  --configuration Release -f net9.0-android
      
   
