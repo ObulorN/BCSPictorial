@@ -22,6 +22,6 @@ jobs:
         dotnet-version: 9.0.x
     
     - name: Check Dir
-    - run:  pwd
+      run:  pwd
      
   
